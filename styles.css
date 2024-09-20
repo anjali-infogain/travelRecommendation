@@ -1,0 +1,132 @@
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 30px; 
+    color: white;
+    font-weight: bold;
+}
+
+#app-name {
+    margin: 20px;
+    font-style: italic;
+}
+
+.nav-input {
+    padding: 5px;
+    width: 300px;
+    height: 25px;
+    margin: 5px ;
+    border: 1px solid black;
+    border-radius: 20px ;
+}
+
+.nav-button {
+    padding: 5px 10px;
+    height: 30px;
+    margin: 20px 0px;
+    border-radius: 10px ;
+    color: #00b386;
+    font-weight: bold;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.nav-button:hover {
+    color: white;
+    background-color: #00b386;
+}
+
+::placeholder {
+    color: #00b386;
+    font-weight: bold;
+  }
+
+#nav-icon {
+    font-size: 50px;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.nav-right-section {
+    margin-right: 20px;
+}
+
+.nav-right-section i {
+    position: static;
+}
+
+.main-page {
+    height: 100vh;
+    background-image: url('assets/bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    position: relative;
+}
+
+.main-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 179, 134, 0.1);
+    z-index: 1;
+}
+
+
+.page-intro {
+    width: 600px;
+    color: white;
+    font-weight: bolder;
+    padding: 20px;
+    display: block;
+    margin: 100px 200px;
+    background-color: rgba(0, 179, 134, 0.7);
+}
+
+
+#book-now-btn {
+    background-color: #007054;
+    color: white;
+    border-radius: 5px;
+    font-weight: bolder;
+    padding: 10px 30px;
+    border: none;
+    font-size: x-large;
+}
+
+#book-now-btn:hover {
+    color: #00b386;
+    background-color: white;
+}
+
+#intro-title {
+    font-weight: bolder;
+    font-size: 75px;
+}
+
+#intro-desc {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
