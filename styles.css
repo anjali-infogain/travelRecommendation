@@ -15,6 +15,10 @@ body, html {
     width: auto;
 }
 
+.navbar-about-us {
+    margin-left: 472px;
+}
+
 .navbar a {
     text-decoration: none;
     margin: 30px; 
@@ -30,7 +34,7 @@ body, html {
 .nav-input {
     padding: 5px;
     width: 300px;
-    height: 25px;
+    height: 30px;
     margin: 5px ;
     border: 1px solid black;
     border-radius: 20px ;
@@ -38,7 +42,7 @@ body, html {
 
 .nav-button {
     padding: 5px 10px;
-    height: 30px;
+    height: 40px;
     margin: 20px 0px;
     border-radius: 10px ;
     color: #00b386;
@@ -52,7 +56,7 @@ body, html {
     background-color: #00b386;
 }
 
-::placeholder {
+.navbar ::placeholder {
     color: #00b386;
     font-weight: bold;
   }
@@ -73,16 +77,16 @@ body, html {
 }
 
 .main-page {
-    height: 100vh;
-    background-image: url('assets/bg1.jpg');
+    min-height: 100vh;
+    min-width: 100vh;
+    background-image: url('assets/bg3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 10px;
-    position: relative;
+    display: flex;
 }
 
-.main-page::before {
+/* .main-page::before {
     content: '';
     position: absolute;
     top: 0;
@@ -91,7 +95,7 @@ body, html {
     height: 100%;
     background-color: rgba(0, 179, 134, 0.1);
     z-index: 1;
-}
+} */
 
 
 .page-intro {
@@ -100,8 +104,8 @@ body, html {
     font-weight: bolder;
     padding: 20px;
     display: block;
-    margin: 100px 200px;
-    background-color: rgba(0, 179, 134, 0.7);
+    margin: 70px 150px;
+    /* background-color: rgba(0, 179, 134, 0.7); */
 }
 
 
@@ -122,11 +126,184 @@ body, html {
 
 #intro-title {
     font-weight: bolder;
-    font-size: 75px;
+    font-size: 80px;
 }
 
 #intro-desc {
     font-size: 24px;
     font-weight: normal;
     margin-bottom: 50px;
+}
+
+.social-media-main {
+    display: block;
+    margin-left: 15px;
+}
+
+.vertical-line {
+    border-left: 2px solid white;
+    height: 300px;
+    margin: 25px;
+}
+
+.social-media-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 45px;
+    margin-top: 100px;
+    color: white;
+}
+
+.social-media-btn {
+    margin: 10px
+}
+
+.about-us {
+    color: white;
+    font-weight: bolder;
+    padding: 20px;
+    display: block;
+    margin: 10px 100px;
+}
+
+#about-us-desc{
+    font-size: 24px;
+    font-weight: normal;
+    background-color: rgba(41, 47, 46, 0.3);
+    padding: 20px;
+}
+
+.team-details{
+    color: white;
+    font-weight: bolder;
+    padding: 20px;
+    display: flex;
+    margin: 10px 100px;
+}
+
+.team-details-desc {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 100px;
+}
+
+#team-title {
+    font-weight: bolder;
+    font-size: 60px;
+}
+
+.team-card{
+    background-color: rgba(41, 47, 46, 0.3);
+    margin: 20px; 
+    padding: 30px;
+    border-radius: 10px;
+
+}
+
+.team-card i {
+    font-size: 40px;
+}
+
+.team-card p {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.team-card button {
+    border-radius: 8px;
+    padding: 10px 60px;
+    color: white;
+    background-color: rgb(19, 19, 126);
+    border: 0.5px solid rgb(2, 185, 246);
+    margin-left: 30px;
+}
+
+.contact-us {
+    color: white;
+    font-weight: bolder;
+    padding: 20px;
+    display: block;
+    margin: 200px 100px;
+}
+
+.contact-us p {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.contact-form {
+    width: 900px;
+    height: 500px;
+    background-color: rgba(41, 47, 46, 0.3);
+    margin: 200px 50px;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.contact-form-input {
+    width: 900px;
+    height: 30px;
+    background-color:rgba(0, 0, 0, 0);
+    border: 1px solid rgb(233, 229, 229);
+    border-radius: 5px;
+}
+
+#contact-btn {
+    width: 900px;
+    background-color: #007054;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 30px;
+    border: none;
+    font-size: x-large;
+    margin: 10px 10px 0px 0px;
+}
+
+#contact-btn:hover {
+    color: #00b386;
+    background-color: white;
+}
+
+#contact-msg {
+    height: 200px;
+}
+
+.search-result {
+    width: 650px;
+    margin: 100px;
+}
+
+.search-result img {
+    width: 650px;
+    height: 350px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.search-result h2 {
+    margin: 20px;
+}
+
+.search-result p {
+    margin: 20px;
+    color: rgb(158, 147, 147) ;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.search-result button {
+    margin: 10px 20px;
+    background-color: #007054;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-size: medium;
+}
+
+.search-result-element {
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
 }
