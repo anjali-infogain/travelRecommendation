@@ -21,7 +21,7 @@ navInputEle.addEventListener("keypress", function(event) {
 
 function searchDestination(keyword) {
     let searchResult;
-    fetch("http://127.0.0.1:8080/travel_recommendation_api.json")
+    fetch("./travel_recommendation_api.json")
         .then((res) => {
             if (!res.ok) {
                 throw new Error
