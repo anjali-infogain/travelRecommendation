@@ -1,13 +1,11 @@
-let searchBtnEle = document.getElementById("nav-search-btn");
-let clearBtnEle = document.getElementById("nav-clear-btn");
-let navInputEle = document.getElementById("nav-input-id");
-let bookNowBtn = document.getElementById("book-now-btn");
+const searchBtnEle = document.getElementById("nav-search-btn");
+const clearBtnEle = document.getElementById("nav-clear-btn");
+const navInputEle = document.getElementById("nav-input-id");
+const bookNowBtn = document.getElementById("book-now-btn");
 const searchResultDiv = document.getElementById("search-result-id");
 
 searchBtnEle.addEventListener("click", function () {
-    console.log("search input: ", navInputEle.value);
     searchDestination(navInputEle.value);
-    navInputEle.value = "";
 });
 
 clearBtnEle.addEventListener("click", function () {
@@ -15,9 +13,11 @@ clearBtnEle.addEventListener("click", function () {
     searchResultDiv.innerHTML = '';
 });
 
-bookNowBtn.addEventListener("click", function () {
-    console.log("Book now Button got clicked!",);
-})
+navInputEle.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        searchDestination(navInputEle.value);
+    }
+  });
 
 function searchDestination(keyword) {
     let searchResult;
@@ -36,16 +36,13 @@ function searchDestination(keyword) {
                     searchResult = data[key];
                 }
             }
-            console.log('searchResult1', searchResult);
             if (!searchResult) {
                 data.countries.forEach(country => {
-                    console.log('country', country);
                     if (country.name.toLowerCase().includes(keyword.toLowerCase())) {
                         searchResult = country.cities;
                     }
                 })
             }
-            console.log('searchResult2', searchResult);
             showSearchResult(searchResult);
             return searchResult;
         })
@@ -65,7 +62,6 @@ function showSearchResult(searchResult) {
         <p>${item.description}</p>
         <button>Visit</button>
       `;
-        console.log('searchResEleDiv: ', searchResEleDiv);
         searchResultDiv.appendChild(searchResEleDiv);
     });
 }
